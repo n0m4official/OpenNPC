@@ -10,9 +10,15 @@ class NPC:
         self.behaviour = behaviour
 
     def move(self, dx, dy) :
-        self.x += dx
-        self.y += dy
-        print(f"{self.name} moved to ({self.x}, {self.y})")
+        new_x = self.x + dx
+        new_y = self.y + dy
+
+        if hasattr(self, 'world') and self.world.is_walkable(new_x, new_y):
+            self.x = new_x
+            self.y = new_y
+            print(f"{self.name} moved to ({self.x}, {self.y})")
+        else:
+            print(f"{self.name} cannot move to ({new_x}, {new_y}) — blocked or out of bounds.")
 
     def update(self) :
         if self.behaviour:
