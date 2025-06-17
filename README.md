@@ -97,8 +97,8 @@ Use it freely in personal, educational, or commercial projects.
 
 ## ⚠️ Disclaimer
 This project is provided for educational and developmental purposes.
-==The author (n0m4official) assumes no responsibility for how this code is used by others.==
-Use at your own discretion.
+\n**The author (n0m4official) assumes no responsibility for how this code is used by others.**
+\nUse at your own discretion.
 
 ---
 
