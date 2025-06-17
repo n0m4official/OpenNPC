@@ -91,14 +91,17 @@ No 3D engines or visual assets needed. Logic-first development all the way.
 
 ## 📄 License
 This project is licensed under the MIT License.
+
 Use it freely in personal, educational, or commercial projects.
 
 ---
 
 ## ⚠️ Disclaimer
 This project is provided for educational and developmental purposes.
-\n**The author (n0m4official) assumes no responsibility for how this code is used by others.**
-\nUse at your own discretion.
+
+**The author (n0m4official) assumes no responsibility for how this code is used by others.**
+
+Use at your own discretion.
 
 ---
 
