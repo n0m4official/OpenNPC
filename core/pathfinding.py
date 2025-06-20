@@ -12,7 +12,6 @@ def reconstruct_path(came_from, current):
     return path
 
 def a_star(grid_world, start, goal):
-    width, height = grid_world.width, grid_world.height
     open_set = []
     heapq.heappush(open_set, (0, start))
 
@@ -20,7 +19,10 @@ def a_star(grid_world, start, goal):
     g_score = {start: 0}
     f_score = {start: heuristic(start, goal)}
 
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    directions = [
+        (-1, 0), (1, 0), (0, -1), (0, 1),
+        (-1, -1), (1, -1), (-1, 1), (1, 1)
+        ]
 
     while open_set:
         _, current = heapq.heappop(open_set)

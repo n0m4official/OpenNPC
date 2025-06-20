@@ -1,13 +1,13 @@
+import keyboard
+import time
+
 from core.npc import NPC
 from world.grid_world import GridWorld
 from core.behaviour_tree import WanderBehaviour
 
 world = GridWorld(width=10, height=10)
-world.add_obstacle(4, 4)
-world.add_obstacle(2, 2)
-world.add_obstacle(7, 1)
+world.generate_obstacles(20)
 
-# Create NPCs
 alice = NPC(npc_id=1, name="Alice", x=2, y=3)
 bob = NPC(npc_id=2, name="Bob", x=5, y=5)
 
@@ -18,15 +18,17 @@ bob.set_behaviour(wander)
 world.add_npc(alice)
 world.add_npc(bob)
 
-for step in range(5):
-    print(f"\n--- Step {step + 1} ---")
+print("Press 'q' to quit.\n")
 
 print("Initial World:")
 world.render()
 
-alice.move(1, 0)
-bob.move(0, -1)
+step = 1
+while not keyboard.is_pressed('q'):
+    print(f"\n--- Step {step + 1} ---")
+    world.update()
+    world.render()
+    step += 1
+    time.sleep(1.0)
 
-world.update()
-print("After Moving:")
-world.render()
+print("\nSimulation Ended.")
