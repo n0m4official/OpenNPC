@@ -40,7 +40,7 @@ OpenNPC/
 ### Run the Simulation
 
 ```bash
-openNPC.exe
+OpenNPC.exe
 ```
 The console will print the grid and NPC movements each simulation step.
 
