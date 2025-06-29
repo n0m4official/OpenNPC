@@ -1,7 +1,7 @@
 import random
 
 class GridWorld:
-    def __init__(self, width=100, height=100):
+    def __init__(self, width=50, height=50):
         self.width = width
         self.height = height
         self.npcs = []
