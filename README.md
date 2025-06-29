@@ -7,7 +7,7 @@ NPCs live on a grid-based world, execute simple behaviours like wandering, and a
 
 ## 🧠 Features
 
-- 🧱 Grid-based world simulation (10x10 by default)
+- 🧱 Grid-based world simulation (100x100 by default)
 - 🤖 NPCs with position, identity, and behaviours
 - 🔁 WanderBehaviour: NPCs move randomly or stay idle
 - 🚧 Boundaries enforced — no wandering off the grid!
