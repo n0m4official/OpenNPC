@@ -40,7 +40,7 @@ OpenNPC/
 ### Run the Simulation
 
 ```bash
-python main.py
+OpenNPC.exe
 ```
 The console will print the grid and NPC movements each simulation step.
 
@@ -69,9 +69,9 @@ Grid:
 
 ## 🛠 Future Plans
 
-- 🧠 Smarter pathfinding behaviour (A*, BFS, etc.)
+- [x] 🧠 Smarter pathfinding behaviour (A*, BFS, etc.)
 - 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
-- ⛓️ Obstacle and terrain support
+- [x] ⛓️ Obstacle and terrain support
 - 📜 Save/load state
 - 🌐 Turn it into a minimal browser game (with Pygame or Godot later)
 
