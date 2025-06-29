@@ -21,11 +21,11 @@ NPCs live on a grid-based world, execute simple behaviours like wandering, and a
 OpenNPC/
 ├── core/
 │ ├── npc.py # NPC class and behaviour support
-│ └── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
+│ ├── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
 │ └── seek_behaviour.py # Goal selecting base class
 │
 ├── pathfinding/
-|  └── pathfinding.py # Pathfinding base class
+| └── pathfinding.py # Pathfinding base class
 |
 ├── world/
 │ └── grid_world.py # GridWorld class handles simulation and rendering
