@@ -1,5 +1,4 @@
 import random
-
 from pathfinding.pathfinding import a_star
 
 class SeekBehaviour:
@@ -18,16 +17,22 @@ class SeekBehaviour:
                 self.path.pop(0)
         
         if self.path:
-            next_x, next_y = self.path.pop(0)
+            next_x, next_y = self.path[0]
             dx = next_x - npc.x
             dy = next_y - npc.y
-            npc.move(dx, dy)
+            success = npc.move(dx, dy)
+            if success:
+                self.path.pop(0)
+            else:
+                print(f"{npc.name} blocked! Recalculating path...")
+                self.path = []
 
-            if not self.path:
+        # Dynamic goal assignment (if desired)
+        if not self.path and (npc.x, npc.y) == self.goal:
+            new_x = random.randint(0, npc.world.width - 1)
+            new_y = random.randint(0, npc.world.height - 1)
+            while npc.world.is_obstacle(new_x, new_y):
                 new_x = random.randint(0, npc.world.width - 1)
                 new_y = random.randint(0, npc.world.height - 1)
-                while npc.world.is_obstacle(new_x, new_y):
-                    new_x = random.randint(0, npc.world.width - 1)
-                    new_y = random.randint(0, npc.world.height - 1)
-                self.goal = (new_x, new_y)
-                print(f"{npc.name} picked new goal: {self.goal}")
+            self.goal = (new_x, new_y)
+            print(f"{npc.name} picked new goal: {self.goal}")

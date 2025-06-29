@@ -17,8 +17,10 @@ class NPC:
             self.x = new_x
             self.y = new_y
             print(f"{self.name} moved to ({self.x}, {self.y})")
+            return True
         else:
             print(f"{self.name} cannot move to ({new_x}, {new_y}) — blocked or out of bounds.")
+            return False
 
     def update(self) :
         if self.behaviour:
