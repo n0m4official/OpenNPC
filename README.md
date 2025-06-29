@@ -7,7 +7,7 @@ NPCs live on a grid-based world, execute simple behaviours like wandering, and a
 
 ## 🧠 Features
 
-- 🧱 Grid-based world simulation (10x10 by default)
+- 🧱 Grid-based world simulation (100x100 by default)
 - 🤖 NPCs with position, identity, and behaviours
 - 🔁 WanderBehaviour: NPCs move randomly or stay idle
 - 🚧 Boundaries enforced — no wandering off the grid!
@@ -21,11 +21,11 @@ NPCs live on a grid-based world, execute simple behaviours like wandering, and a
 OpenNPC/
 ├── core/
 │ ├── npc.py # NPC class and behaviour support
-│ └── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
+│ ├── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
 │ └── seek_behaviour.py # Goal selecting base class
 │
 ├── pathfinding/
-|  └── pathfinding.py # Pathfinding base class
+| └── pathfinding.py # Pathfinding base class
 |
 ├── world/
 │ └── grid_world.py # GridWorld class handles simulation and rendering
@@ -92,7 +92,7 @@ Bob moved to (4, 4)
 ## 🛠 Future Plans
 
 - [x] 🧠 Smarter pathfinding behaviour (A*, BFS, etc.)
-- 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
+- [x] 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
 - [x] ⛓️ Obstacle and terrain support
 - 📜 Save/load state
 - 🌐 Turn it into a minimal browser game (with Pygame or Godot later)
