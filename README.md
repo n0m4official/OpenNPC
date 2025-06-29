@@ -92,7 +92,7 @@ Bob moved to (4, 4)
 ## 🛠 Future Plans
 
 - [x] 🧠 Smarter pathfinding behaviour (A*, BFS, etc.)
-- 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
+- [x] 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
 - [x] ⛓️ Obstacle and terrain support
 - 📜 Save/load state
 - 🌐 Turn it into a minimal browser game (with Pygame or Godot later)
