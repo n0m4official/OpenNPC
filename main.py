@@ -5,7 +5,7 @@ from core.npc import NPC
 from world.grid_world import GridWorld
 from core.seek_behaviour import SeekBehaviour
 
-world = GridWorld(width=50, height=50)
+world = GridWorld(width=25, height=25)
 world.generate_obstacles(20)
 
 alice = NPC(npc_id=1, name="Alice", x=2, y=3)
