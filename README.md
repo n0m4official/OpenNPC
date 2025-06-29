@@ -22,11 +22,18 @@ OpenNPC/
 ├── core/
 │ ├── npc.py # NPC class and behaviour support
 │ └── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
+│ └── seek_behaviour.py # Goal selecting base class
 │
+├── pathfinding/
+|  └── pathfinding.py # Pathfinding base class
+|
 ├── world/
 │ └── grid_world.py # GridWorld class handles simulation and rendering
 │
 ├── main.py # Entry point for running the simulation
+├── OpenNPC.exe # Simulation executable
+├── SECURITY.md # Self Explanitory
+├── License # Self Explanitory
 └── README.md # You’re reading it!
 ```
 ---
@@ -44,25 +51,40 @@ OpenNPC.exe
 ```
 The console will print the grid and NPC movements each simulation step.
 
+Press and hold Q on your keyboard to end the simulation.
+
 ---
 
 ## 📦 Example Output
 ```
---- Step 1 ---
-Alice moved to (3, 3)
-Bob moved to (5, 4)
+Press 'q' to quit.
+
+Initial World:
+. . . . # . . . . .
+. . . # . # . . . .
+. . . . . . # . . #
+. . A # # . . . . .
+. . . . . . . . . #
+. . . . # B . # . .
+# # . . . # . . . .
+# . . . # . . . . .
+# . . . . . . . # #
+. . # . . . . # . .
+
 
 --- Step 2 ---
-Alice tried to move out of bounds to (10, 3) — move blocked.
+Alice moved to (3, 2)
 Bob moved to (4, 4)
-
-
-Grid:
-. . . . . . . . . .
-. . . . . . . . . .
-. . . . . . . . . .
-. . A . . . . . . .
-. . . . B . . . . .
+. . . . # . . . . .
+. . . # . # . . . .
+. . . A . . # . . #
+. . . # # . . . . .
+. . . . B . . . . #
+. . . . # . . # . .
+# # . . . # . . . .
+# . . . # . . . . .
+# . . . . . . . # #
+. . # . . . . # . .
 ```
 
 ---
