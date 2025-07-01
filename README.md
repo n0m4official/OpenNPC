@@ -95,7 +95,7 @@ Bob moved to (4, 4)
 - [x] 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
 - [x] ⛓️ Obstacle and terrain support
 - [x] 📜 Save/load state
-~~- 🌐 Turn it into a minimal browser game (with Pygame or Godot later)~~
+- ~~🌐 Turn it into a minimal browser game (with Pygame or Godot later)~~
 
 ---
 
