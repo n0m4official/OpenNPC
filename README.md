@@ -27,6 +27,9 @@ OpenNPC/
 ├── pathfinding/
 | └── pathfinding.py # Pathfinding base class
 |
+├── utils/
+| └── path_utils.py # Path saving funtions for .path file format
+|
 ├── world/
 │ └── grid_world.py # GridWorld class handles simulation and rendering
 │
