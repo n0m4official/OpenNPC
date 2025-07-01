@@ -41,3 +41,8 @@ class SeekBehaviour:
         self.goal = (new_x, new_y)
         self.path = []
         print(f"{npc.name} new goal set to: {self.goal}")
+    
+    def set_custom_path(self, path):
+        self.path = path
+        self.goal = path[-1] if path else None
+    
