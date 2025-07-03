@@ -7,8 +7,8 @@ Active security support is **not guaranteed**, but basic updates and improvement
 
 | Version | Supported? |
 |---------|------------|
-| Main (latest) | ✅ Yes |
-| Older versions | ❌ No |
+| V1.1.0 (latest) | ✅ Yes |
+| V1.0.0 | ❌ No |
 
 ---
 
