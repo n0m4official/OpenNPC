@@ -70,8 +70,11 @@ while True:
         alice = NPC(npc_id=1, name="Alice", x=2, y=3)
         bob = NPC(npc_id=2, name="Bob", x=5, y=5)
 
-        seek_alice = SeekBehaviour(goal_x=20, goal_y=20)
-        seek_bob = SeekBehaviour(goal_x=1, goal_y=1)
+        goals_alice = [(20, 20), (2, 2), (12, 12)]
+        goals_bob = [(1, 1), (15, 5), (5, 15)]
+
+        seek_alice = SeekBehaviour()
+        seek_bob = SeekBehaviour()
 
         alice.set_behaviour(seek_alice)
         bob.set_behaviour(seek_bob)
