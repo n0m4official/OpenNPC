@@ -9,7 +9,7 @@ namespace OpenNPC_CSharp_ver
 {
 	class Program
 	{
-		static void Main()
+		/*static void Main()
 		{
 			while (true)
 			{
@@ -45,7 +45,7 @@ namespace OpenNPC_CSharp_ver
 					Console.ReadKey();
 				}
             }
-		}
+		}*/
 
 		static void RunSimulation(GridWorld world, List<NPC> npcs)
 		{
