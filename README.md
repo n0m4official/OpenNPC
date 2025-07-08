@@ -1,116 +1,151 @@
 # OpenNPC
 
-NOTE: THE INFORMATION ON THIS PAGE IS BASED ON THE PYTHON VERSION. THE C# VERSION IS ***SIMILAR*** BUT HAS SLIGHTLY DIFFERENT FILE STRUCTURE.
-
-A lightweight, modular NPC simulation framework in Python.  
-NPCs live on a grid-based world, execute simple behaviours like wandering, and are designed to be extensible with more complex AI and game systems.
+A lightweight, modular NPC simulation framework in Python and C#.
+NPCs live on a grid-based world, execute simple or advanced behaviors, and are designed to be easily extended or embedded in larger projects (including future game engine integration).
 
 ---
 
-## 🧠 Features
-
-- 🧱 Grid-based world simulation (25x25 by default)
-- 🤖 NPCs with position, identity, and behaviours
-- 🔁 WanderBehaviour: NPCs move randomly or stay idle
-- 🚧 Boundaries enforced — no wandering off the grid!
-- 🧩 Easily extendable with new AI behaviours or world features
+## 🌟 Features
+- Grid-based world simulation (25x25 by default)
+- NPCs with position, identity, and customizable behaviors
+- WanderBehaviour — random idle movement
+- SeekBehaviour — intelligent goal-seeking with A* pathfinding
+- Obstacles and boundaries enforced
+- Save/load paths for NPCs (custom path design)
+- Modular design — easy to add new behaviors or integrate into other systems
 
 ---
 
+## 💻 Versions
+### 🐍 Python Version
+- Pure Python 3.8+
+- Console-based grid simulation
+- Simple modular structure
+- Supports .path files for saving and loading paths
+
+### ⚙️ C# Version
+- .NET Core or .NET 6+
+- Console application (.exe build included)
+- Cleaner class separation for potential game engine embedding (e.g., Unity, Godot C#)
+- Extra NPC manager for controlling groups and simplifying scenario setup
+
+---
 ## 📁 Project Structure
 
 ```
 OpenNPC/
-├── core/
-│ ├── npc.py # NPC class and behaviour support
-│ ├── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
-│ └── seek_behaviour.py # Goal selecting base class
+├── Python/
+│   ├── core/
+│   |   ├── npc.py # NPC class and behaviour support
+│   |   ├── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
+│   |   └── seek_behaviour.py
+│   ├── world/
+│   |   └── grid_world.py
+│   ├── pathfinding/
+|   |   └── pathfinding.py
+│   ├── utils/
+|   |   └── path_utils.py
+│   └── main.py
 │
-├── pathfinding/
-| └── pathfinding.py # Pathfinding base class
-|
-├── utils/
-| └── path_utils.py # Path saving funtions for .path file format
-|
-├── world/
-│ └── grid_world.py # GridWorld class handles simulation and rendering
+├── CSharp/
+│   ├── GridWorld.cs
+│   ├── IBehaviour.cs
+│   ├── NPC.cs
+│   ├── SeekBehaviour.cs
+│   ├── WanderBehaviour.cs
+│   ├── Pathfinding.cs
+│   ├── PathUtils.cs
+│   ├── NPCManager.cs
+│   └── Program.cs
 │
-├── main.py # Entry point for running the simulation
-├── OpenNPC.exe # Simulation executable
-├── SECURITY.md # Self Explanitory
-├── License # Self Explanitory
-└── README.md # You’re reading it!
+├── OpenNPC.exe
+├── OpenNPC_CSharp_ver.dll
+├── SECURITY.md
+├── LICENSE
+└── README.md
+
 ```
 ---
 
 ## ▶️ Getting Started
-
-### Requirements
-
+### ✅ Python Version
+#### Requirements:
 - Python 3.8 or later
 
-### Run the Simulation
-
-```bash
-OpenNPC.exe
+#### Run:
+bash
 ```
-The console will print the grid and NPC movements each simulation step.
+python main.py
+```
+Use keys to control NPCs and watch the console grid update live.
 
-Press and hold Q on your keyboard to end the simulation.
 
+### ✅ C# Version
+#### Requirements:
+.NET 6 SDK or later
+
+#### Build & Run:
+```
+dotnet build
+dotnet run
+```
+or run the pre-built OpenNPC.exe in CSharp/bin/Release.
 ---
 
-## 📦 Example Output
+## 💬 Example Output (Python & C#)
 ```
-Press 'q' to quit.
+=== OpenNPC Menu ===
+1. Load path from file
+2. Start random paths
+3. Create custom path (record)
+4. Quit
+Enter choice: 2
 
-Initial World:
-. . . . # . . . . .
-. . . # . # . . . .
-. . . . . . # . . #
-. . A # # . . . . .
-. . . . . . . . . #
-. . . . # B . # . .
-# # . . . # . . . .
-# . . . # . . . . .
-# . . . . . . . # #
-. . # . . . . # . .
+Simulation started.
+Press 'P' to pause/resume, 'S' to save paths, 'Q' to quit to menu.
 
-
---- Step 2 ---
-Alice moved to (3, 2)
-Bob moved to (4, 4)
-. . . . # . . . . .
-. . . # . # . . . .
-. . . A . . # . . #
-. . . # # . . . . .
-. . . . B . . . . #
-. . . . # . . # . .
-# # . . . # . . . .
-# . . . # . . . . .
-# . . . . . . . # #
-. . # . . . . # . .
+--- Step 1 ---
+A . . . . #
+. . . # . #
+. . . . . #
+. . B # . .
+. . . . . .
 ```
 
 ---
 
-## 🛠 Future Plans
+## 🧭 Features Comparison
 
-- [x] 🧠 Smarter pathfinding behaviour (A*, BFS, etc.)
-- [x] 🎯 Goal-driven behaviours (e.g. seek targets, avoid threats)
-- [x] ⛓️ Obstacle and terrain support
-- [x] 📜 Save/load state
-- ~~🌐 Turn it into a minimal browser game (with Pygame or Godot later)~~
+| Feature             | Python          | C#             |
+| ------------------- | ---------------- | --------------- |
+| Grid world          | ✔️               | ✔️              |
+| Wander behavior     | ✔️               | ✔️              |
+| Seek behavior       | ✔️               | ✔️              |
+| Obstacles           | ✔️               | ✔️              |
+| Save/load paths     | ✔️               | ✔️              |
+| Embedded engine use | ❌               | ✔️*             |
+| EXE build           | ✔️ (PyInstaller) | ✔️ (.NET build) |
+
+*Still in development, there may be bugs. There is a risk of project loss due to unforseen problems, use with caution and be smart.
+
+---
+
+## 🔮 Future Roadmap
+- ✅ Smarter pathfinding (A*)
+- ✅ Save/load path system
+- ✅ Support for multiple simultaneous NPCs
+- ⬜️ Engine-agnostic plugin interfaces
+- ⬜️ Visualization hooks for 2D or 3D worlds
+- ⬜️ AI modules (avoidance, flocking, formations)
 
 ---
 
 ## 🤝 Contributing
-This project is open to learning-focused and experimental contributions.
-If you’re into AI, game logic, or systems design — come build with us!
+We love curious minds! Whether you enjoy AI logic, simulation design, or game system architecture:
 
-- Fork the repo
-- Submit a pull request
-- Or just file an issue to brainstorm
+1. Fork the repo
+2. Submit a pull request
+3. Open an issue to discuss ideas
 
 No 3D engines or visual assets needed. Logic-first development all the way.
 
@@ -124,11 +159,10 @@ Use it freely in personal, educational, or commercial projects.
 ---
 
 ## ⚠️ Disclaimer
-This project is provided for educational and developmental purposes.
-
-**The author (n0m4official) assumes no responsibility for how this code is used by others.**
-
-Use at your own discretion.
+This framework is for learning and experimental purposes.
+The authors assume no responsibility for misuse or unintended consequences.
 
 ---
 
+## 💬 Questions? Ideas?
+Open an issue or discussion.
