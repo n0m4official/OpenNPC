@@ -1,6 +1,6 @@
 # OpenNPC
 
-![OpenNPC-icon-min](https://github.com/user-attachments/assets/1d38f81d-da4d-464d-858d-ede10583e9a7 | width=100)
+<img src="https://github.com/user-attachments/assets/455d6d61-d899-4f9c-a355-a56f268b4139" width=500>
 
 A lightweight, modular NPC simulation framework in Python and C#.
 NPCs live on a grid-based world, execute simple or advanced behaviors, and are designed to be easily extended or embedded in larger projects (including future game engine integration).
