@@ -1,3 +1,5 @@
+![OpenNPC-icon-min](https://github.com/user-attachments/assets/1d38f81d-da4d-464d-858d-ede10583e9a7)
+
 # OpenNPC
 
 A lightweight, modular NPC simulation framework in Python and C#.
