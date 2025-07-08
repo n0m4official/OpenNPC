@@ -1,6 +1,6 @@
 # OpenNPC
 
-NOTE: THE INFORMATION ON THIS PAGE IS BASED ON THE PYTHON VERSION. THE C# VERSION IS **SIMILAR** BUT HAS SLIGHTLY DIFFERENT FILE STRUCTURE.
+NOTE: THE INFORMATION ON THIS PAGE IS BASED ON THE PYTHON VERSION. THE C# VERSION IS ***SIMILAR*** BUT HAS SLIGHTLY DIFFERENT FILE STRUCTURE.
 
 A lightweight, modular NPC simulation framework in Python.  
 NPCs live on a grid-based world, execute simple behaviours like wandering, and are designed to be extensible with more complex AI and game systems.
