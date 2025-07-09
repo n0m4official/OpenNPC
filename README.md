@@ -39,7 +39,7 @@ OpenNPC/
 ├── Python/
 │   ├── core/
 │   |   ├── npc.py
-│   |   ├── behaviour_tree.py # Not used for now
+│   |   ├── behaviour_tree.py
 │   |   └── seek_behaviour.py
 │   ├── world/
 │   |   └── grid_world.py
