@@ -38,8 +38,8 @@ NPCs live on a grid-based world, execute simple or advanced behaviors, and are d
 OpenNPC/
 ├── Python/
 │   ├── core/
-│   |   ├── npc.py # NPC class and behaviour support
-│   |   ├── behaviour_tree.py # Behaviour base class (e.g. WanderBehaviour)
+│   |   ├── npc.py
+│   |   ├── behaviour_tree.py # Not used for now
 │   |   └── seek_behaviour.py
 │   ├── world/
 │   |   └── grid_world.py
